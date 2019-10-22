@@ -39,7 +39,7 @@ bool QRSprite::initWithString(const std::string& code,int size)
 		texture->initWithData(imageData, width * width, Texture2D::PixelFormat::RGBA8888, width, width, s);
 		flag = initWithTexture(texture);
 
-		setScale(size / width);
+		setScale(size * 1.0 / width);
         QRcode_free(_qrcode);
     }
     return flag;
